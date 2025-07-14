@@ -1,0 +1,427 @@
+*{
+    padding: 20px;
+    margin: 0px;
+    box-sizing: border-box;
+    /* font-family: PP Neue Montreal, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    -webkit-font-smoothing: antialiased; */
+}
+body{
+    background-color:rgb(235, 234, 234);
+    padding: 0px;
+}
+header{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    font-size: 25px;
+    font-weight: 700;
+    align-items: center;
+}
+.navbw{
+    display: flex;
+    grid-column-gap: 150px;
+    padding-top: 85px;
+    padding-left: 350px;
+}
+#nav{
+    position:fixed;
+    top: 40px;
+    padding-left: 5px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+}
+.menu{
+    position:fixed;
+    right: 50px;
+    top: 25px;
+}
+
+main{
+    padding: 0px;
+}
+
+.div2{
+    padding-top: 100px;
+}
+
+.h11{
+    font-size: 110px;
+    padding-left: 25px;
+}
+#dev{
+    margin-top: -80px;
+}
+
+img{
+    height: 300px;
+    width: 630px;
+    padding-top: 1px;
+    padding-left: 45px;
+}
+
+.div3{
+    height: 350px;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 0px ;
+}
+.arrow{
+    font-size: 100px;
+    font-weight: bolder;
+    padding-right: 30px;
+
+}
+.sup{
+    font-size: 25px;
+    padding-bottom: 0px;
+    padding-left: 80px;
+    padding-right:150px;
+}
+
+.as{
+    font-size: 130px;
+    text-align: right;
+    padding-bottom: 0px;
+    padding-left: 100px;
+}
+#ass{
+    padding: 0px;
+    margin: 0px;
+
+}
+.div4{
+    width: 100%;
+    display: flex;
+    padding-top: 300px;
+    padding-left: 25px;
+}
+#p1{
+    font-size: 25px;
+    padding-right: 300px;
+    padding-left: 0%;
+}
+#about{
+    text-transform: capitalize;
+    font-size: 40px;
+    font-weight: 600;
+}
+.gymimage{
+    padding: 0%;
+}
+.emergency{
+    display: flex;
+    padding-left: 0px;
+    padding-top: 80px;
+    grid-column-gap: 50px;
+}
+.uiux{
+    font-size: 25px;
+    width: 250px; 
+    
+}
+.moredetails{
+    font-size: 25px;
+    width: 600px;
+}
+.meandservices{
+    font-size: 25px;
+    padding-left: 320px;
+    text-decoration: underline;
+}
+
+.div5{
+    width: 1200px;
+    display: flex;
+    padding-top: 300px;
+    padding-left: 0px;
+    font-size: 25px;
+    justify-content: space-between;
+
+}
+
+.portimage{
+    height: 900px;
+    width: 920px;
+    padding-left:200px;
+    padding-top: 20px;
+}
+#portdetails{
+    font-size: 20px;
+    padding-top: 90px;
+}
+.div6{
+    width: 100%;
+    display: flex;
+    padding-left: 25px;
+}
+#portfolio{
+    font-size: 100px;
+    text-align: center;
+    text-decoration: underline;
+}
+#portfolio2{
+    font-size: 40px;
+    text-align: center;
+}
+.div8{
+    width: 100%;
+    display: flex;
+    padding-top: 300px;
+}
+#p3{
+    font-size: 25px;
+    padding-left: 5px;
+}
+
+#p32{
+    font-size: 100px;
+    padding-left: 200px;
+    font-weight: bold;
+    padding-top: 0px;
+}
+#p322{
+    font-size: 25px;
+    width: 700px;
+    padding-left: 200px;
+    padding-top: 50px;
+}
+#p323{
+    font-size: 25px;
+    width: 800px;
+    padding-left: 500px;
+    text-decoration: underline;
+}
+#p33{
+    font-size: 25px;
+     padding-top: 0px;
+}
+
+.div9{
+    width: 100%;
+    display: flex;
+    padding-top: 300px;
+    font-size: 25px;
+}
+#p4{
+    padding-left: 5px;
+}
+#p42{
+    padding-left: 200px;
+}
+#p43{
+    padding-left: 400px;
+}
+
+.div10{
+    font-size: 160px;
+    text-decoration: underline;
+}
+
+footer{
+    height: 30px;
+    padding-top: 150px;
+    padding-bottom: 1px;
+    margin: 0px;
+    width: 100%;
+    align-items: end;
+    align-items: center;
+    font-size: 25px;
+    padding-left: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* //about// */
+.about1{
+    padding-left: 0px;
+    margin-left: -100px;
+}
+#pcd{
+    font-size: 100px;
+    padding-top: 0px;
+    font-weight: bold;
+    margin-top: -60px;
+    padding-left: 0px;
+}
+
+.pp{
+    margin-top: -60px;
+}
+.aboutimg{
+    padding: 0%;
+    
+}
+.anotherimage{
+   width: 100%;
+   height: 500px;
+   padding-left: 300px;
+   padding-top: 50px;
+}
+#pc{
+    font-size: 100px;
+    font-weight: bold;
+    padding-left: 0px;
+    
+}
+.cp{
+    margin-top: -80px;
+}
+#moredetailsabout{
+    width: 400px;
+}
+
+#p3223{
+    font-size: 100px;
+    padding-left: 150px;
+    font-weight: bold;
+    padding-top: 0px;
+
+}
+.accordion {
+  /* border-top: 1px solid #000; */
+  /* border-bottom: 1px solid #000; */
+  padding-top: 100px;
+  padding-left: 150px;
+  width: 1300px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #000000;
+  cursor: pointer;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+}
+
+.accordion-header .number {
+  width: 50px;
+  font-weight: bold;
+}
+
+.accordion-header .title {
+  flex: 1;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.accordion-header .toggle {
+  width: 30px;
+  text-align: center;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.accordion-body {
+  display: none;
+  padding: 10px 0 20px 50px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.accordion-item.active .accordion-body {
+  display: block;
+}
+
+.accordion-item.active .toggle {
+  content: "−";
+}
+
+/* slider */
+.interests {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  font-size: 100px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.tab {
+  cursor: pointer;
+  color: rgba(0,0,0,0.2);
+  transition: color 0.3s;
+}
+
+.tab.active {
+  color: #000;
+}
+
+.slider-container {
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+  padding-top: 100px;
+  box-sizing: border-box;
+}
+
+.slide h3 {
+  font-size: 25px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.slide p {
+  font-size: 25px;
+  width: 770px;
+  line-height: 1.5;
+}
+
+/* contact */
+
+#sm{
+    font-size: 25px;
+    text-align: center;
+    padding-top: 200px;
+}
+.emaildiv{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 0px;
+    margin-top: -40px;
+}
+.email{
+    font-size: 150px;
+    text-decoration: underline;
+}
+
+.connectme{
+    font-size: 150px;
+    text-decoration: underline;
+    text-align: center;
+    padding-bottom: 140px;
+}
+
+.formargin{
+    margin-top: -50px;
+}
