@@ -27,7 +27,7 @@
     <h1 class="h11", id="dev">DEVELOPER</h1>
     </div>
     <img src="newme.jpg" alt="" class="imganimation">
-    <div class="div3">
+    <div class="div3 scroll-animate">
         <div id="arrow">
             <span class="arrow">↓</span>
         </div>
@@ -38,11 +38,11 @@
             <h1 class="as">AHMAD<br> SIDDIQUI</h1>
         </div>
     </div>
-    <div class="div4">
+    <div class="div4 sanimate">
         <div class="p01">
             <p id="p1">01/</p>
         </div>
-        <div class="about1">
+        <div class="about1 sanimate">
             <p id="about">Passionate about web technologies. I love working at the intersection of creativity and user friendly interfaces.I create memorable web experiences.<br><br> When I'm not building or exploring new web experiences, I'm probably at gym or travelling.</p>
             <div class="emergency">
             <p class="uiux">UI/UX Designer with a Focus on User-Centered Experiences</p>
@@ -51,7 +51,7 @@
             <a href="about.html" class="meandservices">More about me and services</a>
         </div>
     </div>
-    <div class="div5">
+    <div class="div5 scroll-animate">
         <div class="p02">
             <p id="p2">02/</p> 
         </div>
@@ -62,7 +62,7 @@
             <p id="p23">CREATIVE<br>DEVELOPMENT</p>
         </div>
     </div>
-    <div class="div6">
+    <div class="div6 sanimate">
         <div>
             <a href="#" id="portfolio">AHMAD<br> SIDDIQUI</a>
             <p id="portfolio2">PORTFOLIO &#169;2025</p>
@@ -72,20 +72,20 @@
             <img src="port2.jpg" alt="" class="portimage">
         </div>
     </div>
-    <div class="div8">
-        <div class="p03">
+    <div class="div8 divforpadding">
+        <div class="p03 scroll-animate">
             <p id="p3">03/</p> 
         </div>
-        <div>
+        <div class="mblurgent scroll-animate">
             <p id="p32">GYM,<br><img src="gym.jpg.jpg" alt="" class="gymimage"><br>TRAVELLING,<BR>MUSIC.</p>
             <p id="p322">My hobbies—going to the gym, traveling, and listening to music—fill much of my free time. The gym keeps me fit and focused, travel fuels my curiosity, and music brings emotional balance. Together, they help me unwind, stay inspired, and make the most of my leisure moments.</p>
             <p><a href="about.html" id="p323">More about me</a></p>
         </div>
-        <div>
+        <div class="scroll-animate">
             <p id="p33">ABOUT ME</p>
         </div>
     </div>
-    <div class="div9">
+    <div class="div9 scroll-animate">
         <div class="p04">
             <p id="p4">04/</p> 
         </div>
@@ -113,5 +113,29 @@
             <p>Development Ahmad Siddiqui</p>
         </div>
     </footer>
+  <script>
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top <= window.innerHeight - 100 &&
+      rect.bottom >= 0
+    );
+  }
+
+  function triggerAnimations() {
+    const elements = document.querySelectorAll('.scroll-animate');
+
+    elements.forEach(el => {
+      if (isInViewport(el) && !el.classList.contains('in-view')) {
+        const animClasses = el.dataset.animation?.split(' ') || [];
+        el.classList.add('in-view', ...animClasses);
+      }
+    });
+  }
+
+  window.addEventListener('scroll', triggerAnimations);
+  window.addEventListener('load', triggerAnimations);
+</script>
+<script src="newscript.js"></script>
 </body>
 </html>
