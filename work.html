@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="css.css">
 </head>
 <body>
+    <div id="page-exit-transition"></div>
+    <div id="page-entry-transition"></div>
+
+  
 <div style="display: flex; flex-direction: column; gap: 100px;">
 <header style="padding-left: 0%;">
     <div class="navbar">
@@ -28,6 +32,7 @@
         </div>
 </header>
 <main>
+
     <div style="display: flex; justify-content: flex-start; align-items: flex-start; gap: 150px;">
         <div class="div9" style="padding-left:0; padding-top: 280px; font-weight: 600;">
             <div class="drop-wrap"><p class="drop-text" style="padding-bottom: 28px; padding-right: 15px;">01/</p>
@@ -44,10 +49,11 @@
             <span>S</span>
         </div>
     </div>
-</div>
+
 <div style="display: flex; flex-direction: row; padding: 0%; padding-left: 20px; gap:0;">
     <div>
         <div class="div10" style="padding: 0%; padding-bottom: 20px; padding-top: 100px">
+          <a href="projectpage.html">
             <div class="textemail"  style="display: flex; font-size: 100px; font-weight: bold; width: 385px;">
                 <span class="spanemail">a</span>
                 <span class="spanemail">h</span>
@@ -55,7 +61,7 @@
                 <span class="spanemail">a</span>
                 <span class="spanemail">d</span>
             </div>
-             <div class="textemail" style="display: flex; font-size: 100px; font-weight: bold; width: 445px;">
+             <div class="textemail" style="display: flex; font-size: 100px; font-weight: bold; width: 435px;">
                 <span class="spanemail">s</span>
                 <span class="spanemail">i</span>
                 <span class="spanemail">d</span>
@@ -65,6 +71,7 @@
                 <span class="spanemail">u</span>
                 <span class="spanemail">i</span>
             </div> 
+            </a>
         </div>
         <div class="divd1" style=" font-size: 40px; padding-left: 80px; padding-top: 15px;">
       <div class="drop-wrap"><p class="drop-text1">PORTFOLIO &#169;2025</p></div>
@@ -87,12 +94,13 @@
         <img src="port2.jpg" alt="" class="portimage">
     </div>
 </div>
+</div>
     <div class="div9" style="padding-bottom: 80px; font-weight: 600;">
         <div class="drop-wrap"><p class="drop-text" style="padding-bottom: 28px;">02/</p></div>
         <div class="drop-wrap"><p class="drop-text">WANT TO WORK<br>TOGETHER?</p></div>
         <div class="drop-wrap"><p class="drop-text">SEND ME A<br>MESSAGE</p></div>
     </div>
-    <div class="div10" style="width: 1070px; padding-left: 35px;">
+    <div class="div10" style="width: 1040px; padding-left: 35px;">
         <div class="textemail">
             <span class="spanemail">a</span>
             <span class="spanemail">h</span>
@@ -185,5 +193,74 @@ window.addEventListener('scroll', triggerTextDrop);
 window.addEventListener('load', triggerTextDrop);
 
 </script>
+
+<script src="customcursor"></script>
+<!-- <script>
+  const transition = document.getElementById('page-exit-transition');
+
+  document.querySelectorAll('a[href]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+
+      // Skip internal and JS links
+      if (!href || href.startsWith('#') || href.startsWith('javascript:')) return;
+
+      e.preventDefault();
+
+      // Start slide-down
+      transition.classList.add('active');
+
+      // After transition, navigate
+      setTimeout(() => {
+        window.location.href = href;
+      }, 1000); // Match CSS duration
+    });
+  });
+</script> -->
+<script>
+  window.addEventListener('load', () => {
+    const entry = document.getElementById('page-entry-transition');
+
+    // Delay fade-out slightly after full load
+    setTimeout(() => {
+      entry.classList.add('fade-out');
+    }, 100); // allow browser to paint the black screen
+
+    // Optional: remove the black screen fully
+    setTimeout(() => {
+      entry.style.display = 'none';
+    }, 500); // after fade completes (0.2s + buffer)
+  });
+</script>
+
+<script>
+  const transition = document.getElementById('page-exit-transition');
+
+  const pageName = window.location.pathname.split("/").pop();
+
+  if (pageName === "projectpage.html") {
+    transition.style.background = "white"; 
+  } else {
+    transition.style.background = "black"; 
+  }
+
+  document.querySelectorAll('a[href]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+
+      // Skip same-page or JS links
+      if (!href || href.startsWith('#') || href.startsWith('javascript:')) return;
+
+      e.preventDefault();
+
+      transition.classList.add('active');
+
+      setTimeout(() => {
+        window.location.href = href;
+      }, 800);
+    });
+  });
+</script>
+
 </body>
 </html>
