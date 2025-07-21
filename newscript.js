@@ -53,3 +53,19 @@ function triggerEmailSpanAppear() {
 window.addEventListener('scroll', triggerEmailSpanAppear);
 window.addEventListener('load', triggerEmailSpanAppear);
 
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return rect.top <= window.innerHeight && rect.bottom >= 0;
+}
+
+function handleFooterFadeIn() {
+  const footer = document.querySelector('footer');
+  if (footer && isInViewport(footer)) {
+    footer.classList.add('in-view');
+  }
+}
+
+window.addEventListener('scroll', handleFooterFadeIn);
+window.addEventListener('load', handleFooterFadeIn);
+
