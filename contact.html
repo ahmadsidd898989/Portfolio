@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css.css">
 </head>
 <body class="contact-page" style="background-color: black">
+  <div id="page-exit-transition"></div>
+  <div id="page-entry-transition"></div>
 <header class="headeranimation" style="color: white;">
     <div class="navbar">
         <a href="index.html" id="nav" style="color: white;">Ahmad Siddiqui</a>
@@ -14,6 +16,12 @@
         <p style="color: white;"> UI/UX<br>Designer</p>
         <p style="color: white;">Based in Rampur<br> India</p>
     </div>
+    <!-- <div class="menu" style="color: white;">
+        <a href="index.html" style="color: white;">Home,</a>
+        <a href="work.html" style="color: white;">Work,</a>
+        <a href="about.html" style="color: white;">About,</a>
+        <a href="contact.html" style="color: white; text-decoration: underline;">Contact</a>
+    </div> -->
     <div class="menu" style="color: white;">
             <div style="padding-left: 5px; color: white;">
             <a class="waah" href="index.html" style="color: white;">Home,</a>
@@ -71,7 +79,7 @@
 
 <div class="div10" style="color: white;  padding-bottom: 100px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
       <a href="https://www.instagram.com/ahmad_6idd" target="_blank" style="color: white;">
-     <div class="textemail" style=" width: 660px;">
+     <div class="textemail" style=" width: 632px;">
         <span class="spanemail">i</span>
         <span class="spanemail">n</span>
         <span class="spanemail">s</span>
@@ -83,7 +91,7 @@
     </div>
     </a>
     <a href="https://github.com/ahmadsidd898989" target="_blank" style="color: white;">
-    <div class="textemail" style="width: 480px;">
+    <div class="textemail" style="width: 450px;">
         <span class="spanemail">g</span>
         <span class="spanemail">i</span>
         <span class="spanemail">t</span>
@@ -93,7 +101,7 @@
     </div> 
     </a>
     <a href="https://wa.me/919639942318" target="_blank" style="color: white;">
-    <div class="textemail" style="width: 685px;">
+    <div class="textemail" style="width: 667px;">
         <span class="spanemail">w</span>
         <span class="spanemail">h</span>
         <span class="spanemail">a</span>
@@ -164,6 +172,43 @@ function isInViewport(el) {
   window.addEventListener('load', triggerTextDrop);
 
 </script>
+<script src="customcursor"></script>
+<script>
+  const transition = document.getElementById('page-exit-transition');
 
+  document.querySelectorAll('a[href]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+
+      // Skip internal and JS links
+      if (!href || href.startsWith('#') || href.startsWith('javascript:')) return;
+
+      e.preventDefault();
+
+      // Start slide-down
+      transition.classList.add('active');
+
+      // After transition, navigate
+      setTimeout(() => {
+        window.location.href = href;
+      }, 1000); // Match CSS duration
+    });
+  });
+</script>
+<script>
+  window.addEventListener('load', () => {
+    const entry = document.getElementById('page-entry-transition');
+
+    // Delay fade-out slightly after full load
+    setTimeout(() => {
+      entry.classList.add('fade-out');
+    }, 100); // allow browser to paint the black screen
+
+    // Optional: remove the black screen fully
+    setTimeout(() => {
+      entry.style.display = 'none';
+    }, 500); // after fade completes (0.2s + buffer)
+  });
+</script>
 </body>
 </html>
