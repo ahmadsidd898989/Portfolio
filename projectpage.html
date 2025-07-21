@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body style="background-color: #464c47; color: white;" >
+    <div id="popup-content">
+        <span id="close-pop">&times;</span>
+        <button id="close-popup">Close</button>
+        <div class="divpop">
+            <div class="drop-wrap"><p class="drop-text">Case study</p></div>
+            <div class="drop-wrap"><a class="visitclass" href="index.html" style="color: white;"><p class="drop-text">Visit live link</p></a></div>
+             <div class="drop-wrap"><p class="drop-text">Portfolio&#169;2025</p></div>
+        </div>
+        <div class="mainpopdiv">
+            <div class="mainpopdiv2"> 
+                <div style="padding: 0%; font-weight: bold;">
+                    <div class="mainpopdiv3">
+                        <div class="divd1" style=" padding-left: 1px; flex-direction: column; padding-top: 120px;">
+                        <div class="drop-wrap"><p class="drop-text1" style="font-size: 25px; padding-left: 0%;">The site features interactive sections such as </p></div>
+                        <div class="drop-wrap"><p class="drop-text1" style="font-size: 25px; padding-left: 0%;">project galleries, a smooth scroll experience, </p></div>
+                        <div class="drop-wrap"><p class="drop-text1" style="font-size: 25px; padding-left: 0%;">and tab-based content transitions. </p></div>
+                        <div class="drop-wrap"><p class="drop-text1" style="font-size: 25px; padding-left: 0%;">JavaScript handles the dynamic behavior </p></div>
+                        <div class="drop-wrap"><p class="drop-text1" style="font-size: 25px; padding-left: 0%;">and enhances user experience, while </p></div>
+                        <div class="drop-wrap"><p class="drop-text1" style="font-size: 25px; padding-left: 0%;">CSS ensures modern styling and layout</p></div>
+                        <div class="drop-wrap"><p class="drop-text1" style="font-size: 25px; padding-left: 0%;">consistency across devices.</p></div>
+                        </div>
+                     </div>
+                </div>
+                <div class="projectinfodiv">
+                    <p class="underdiv">PROJECT INFO</p>
+                    <pre class="underdiv">Role                              Design & Development</pre> 
+                    <pre class="underdiv">Year                                                             2025</pre>
+                </div>
+            </div> 
+            <div class="image-scroll-wrapper">
+                <div class="maindiv333">
+                <img src="img1.png" alt="">
+                <img src="img2.png" alt="">
+                <img src="img3.png" alt="">
+                <img src="img4.png" alt="">
+                <img src="img5.png" alt="">
+                <img src="img6.png" alt="">
+                </div>  
+            </div> 
+        </div>
+    </div>
+
+<script>
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return rect.top < window.innerHeight && rect.bottom >= 0;
+}
+
+  // Add class when visible
+function triggerTextDrop() {
+    document.querySelectorAll('.drop-text').forEach(el => {
+      if (isInViewport(el)) {
+        el.classList.add('in-view');
+      }
+    });
+}
+
+  // Run on scroll and page load
+window.addEventListener('scroll', triggerTextDrop);
+window.addEventListener('load', triggerTextDrop);
+</script>
+
+<script>function isInViewport(el) {
+   const rect = el.getBoundingClientRect();
+   return rect.top < window.innerHeight; // triggers as soon as visible
+}
+
+
+function triggerTextDrop() {
+  document.querySelectorAll('.drop-text1').forEach(el => {
+    if (isInViewport(el) && !el.classList.contains('in-view')) {
+      el.classList.add('in-view');
+    }
+  });
+}
+
+window.addEventListener('scroll', triggerTextDrop);
+window.addEventListener('load', triggerTextDrop);
+</script>
+
+ <script>
+    document.getElementById("close-popup").addEventListener("click", function () {
+      // First try to go back in history
+      if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        // Fallback: go to a specific page
+        window.location.href = "index.html"; // change this to your main page
+      }
+    });
+</script>
+
+<script>
+const popup = document.getElementById('popup-content');
+
+if (popup) {
+  window.addEventListener('wheel', function(e) {
+    e.preventDefault(); // Stop default vertical scroll
+    window.scrollBy({
+      left: e.deltaY, // Scroll horizontally based on vertical scroll
+      behavior: 'auto'
+    });
+  }, { passive: false });
+}
+
+
+</script>
+</body>
+</html>
