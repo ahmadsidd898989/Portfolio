@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="css.css">
 </head>
 <body>
-<!--     <div id="page-exit-transition"></div>
-    <div id="page-entry-transition"></div> -->
+    <div id="page-exit-transition"></div>
+    <div id="page-entry-transition"></div>
 
   
 <div style="display: flex; flex-direction: column; gap: 100px;">
@@ -261,6 +261,13 @@ window.addEventListener('load', triggerTextDrop);
     });
   });
 </script>
-
+<script>
+  window.addEventListener('load', () => {
+    const transition = document.getElementById('page-exit-transition');
+    if (transition) {
+      transition.classList.add('hide');
+    }
+  });
+</script>
 </body>
 </html>
