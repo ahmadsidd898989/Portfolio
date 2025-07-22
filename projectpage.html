@@ -110,8 +110,15 @@ if (popup) {
     });
   }, { passive: false });
 }
+</script>
 
-
+<script>
+  window.addEventListener("pageshow", function () {
+    const transition = document.getElementById("page-exit-transition");
+    if (transition) {
+      transition.classList.remove("active"); // hide the overlay on back navigation
+    }
+  });
 </script>
 </body>
 </html>
