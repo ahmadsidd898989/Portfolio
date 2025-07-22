@@ -114,12 +114,33 @@ if (popup) {
 </script>
 
 <script>
-  window.addEventListener("pageshow", function () {
-    const transition = document.getElementById("page-exit-transition");
-    if (transition) {
-      transition.classList.remove("active"); // hide the overlay on back navigation
-    }
+  const transition = document.getElementById('page-exit-transition');
+
+  const pageName = window.location.pathname.split("/").pop();
+
+  if (pageName === "projectpage.html") {
+    transition.style.background = "white"; 
+  } else {
+    transition.style.background = "black"; 
+  }
+
+  document.querySelectorAll('a[href]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+
+      // Skip same-page or JS links
+      if (!href || href.startsWith('#') || href.startsWith('javascript:')) return;
+
+      e.preventDefault();
+
+      transition.classList.add('active');
+
+      setTimeout(() => {
+        window.location.href = href;
+      }, 800);
+    });
   });
 </script>
+
 </body>
 </html>
