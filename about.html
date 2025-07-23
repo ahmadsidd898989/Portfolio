@@ -184,7 +184,7 @@
             <p id="p23">DRAG AROUND</p>
         </div>
     </div>
-    <section class="interests" style="padding-bottom: 200px;">
+    <section class="interests">
 
   <div class="tabs">
     <p class="tab active" data-idx="0">GYM</p>
@@ -196,18 +196,32 @@
     <div class="slider">
       <!-- Gym Slide -->
       <div class="slide">
+        <div>
         <h3>Strength & Discipline</h3>
         <p>Hitting the gym is part of my daily rhythm. I focus on strength training and fitness, which helps me stay grounded, energized, and focused both physically and mentally.</p>
-      </div>
+        </div>
+        <div>
+          <img src="gym2.png" alt="" class="intrestimg">
+        </div>
       <!-- Travelling Slide -->
       <div class="slide">
+        <div>
         <h3>New Places, Fresh Perspectives</h3>
         <p>Travelling inspires me. I love exploring new cultures, cuisines, and landscapes—whether it’s a weekend road trip or a long adventure. Every journey brings a new story and viewpoint.</p>
+        </div>
+        <div>
+          <img src="music.jpg" alt="" class="intrestimg">
+        </div>
       </div>
       <!-- Music Slide -->
       <div class="slide">
+        <div>
         <h3>Beats & Balance</h3>
         <p>Music keeps me motivated. Whether it’s focus playlists during work, high-energy tracks at the gym, or laid-back evening tunes, I enjoy discovering sounds that match every mood.</p>
+        </div>
+        <div>
+        <img src="music.jpg" alt="" class="intrestimg">
+        </div>
       </div>
     </div>
   </div>
@@ -360,28 +374,6 @@ function isInViewport(el) {
 
 </script>
 <script src="customcursor"></script>
-<!-- <script>
-  const transition = document.getElementById('page-exit-transition');
-
-  document.querySelectorAll('a[href]').forEach(link => {
-    link.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
-
-      // Skip internal and JS links
-      if (!href || href.startsWith('#') || href.startsWith('javascript:')) return;
-
-      e.preventDefault();
-
-      // Start slide-down
-      transition.classList.add('active');
-
-      // After transition, navigate
-      setTimeout(() => {
-        window.location.href = href;
-      }, 1000); // Match CSS duration
-    });
-  });
-</script> -->
 <script>
   window.addEventListener('load', () => {
     const entry = document.getElementById('page-entry-transition');
@@ -405,7 +397,7 @@ function isInViewport(el) {
     transition.style.background = "#f54291"; // Change to your custom color
   }
 
-  document.querySelectorAll('a[href]').forEach(link => {
+document.querySelectorAll('a[href]').forEach(link => {
   link.addEventListener('click', function (e) {
     const href = this.getAttribute('href');
 
