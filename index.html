@@ -431,5 +431,14 @@ window.addEventListener('load', triggerTextDrop);
   });
 });
 </script>
+<script>
+  window.addEventListener('pageshow', function(event) {
+  const exit = document.getElementById('page-exit-transition');
+
+  if (event.persisted || performance.getEntriesByType('navigation')[0]?.type === 'back_forward') {
+    if (exit) exit.style.display = 'none';
+  }
+});
+ </script>
 </body>
 </html>
