@@ -244,6 +244,13 @@ window.addEventListener('load', triggerTextDrop);
     transition.style.background = "black"; 
   }
 
+     window.addEventListener('pageshow', event => {
+    if (event.persisted || performance.getEntriesByType('navigation')[0].type === 'back_forward') {
+      if (entry) entry.style.display = 'none';
+      if (exit) exit.classList.remove('active');
+    }
+  });
+    
  document.querySelectorAll('a[href]').forEach(link => {
   link.addEventListener('click', function (e) {
     const href = this.getAttribute('href');
