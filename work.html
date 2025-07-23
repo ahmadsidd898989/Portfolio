@@ -265,13 +265,10 @@ window.addEventListener('load', triggerTextDrop);
 </script>
  <script>
   window.addEventListener('pageshow', function(event) {
-  // 'persisted' is true if the page is loaded from the back-forward cache
-  const entry = document.getElementById('page-entry-transition');
   const exit = document.getElementById('page-exit-transition');
 
   if (event.persisted || performance.getEntriesByType('navigation')[0]?.type === 'back_forward') {
-    // Hide transition screens
-    if (entry) entry.style.display = 'none';
+   
     if (exit) exit.style.display = 'none';
   }
 });
